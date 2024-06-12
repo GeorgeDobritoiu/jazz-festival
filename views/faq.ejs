@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch('menu.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("main-menu").innerHTML = data;
+        });
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div id="main-menu"></div>
+  </header>
+
+  <main>
+    <section class="faq-list">
+      <h3>Frequently Asked Questions</h3>
+      <dl>
+        <dt>What styles of jazz music are represented at Jazz a Bella?</dt>
+        <dd>Jazz a Bella features a wide variety of jazz styles, from swing and bebop to cool tones and contemporary explorations.</dd>
+        <br>
+        <dt>Are there any ticketed performances?</dt>
+        <dd>Information about ticketing can be found on our website's "Festival Info" page. You can also contact us directly.</dd>
+        <br>
+        <dt>Is there seating available at the performances?</dt>
+        <dd>Seating arrangements vary depending on the venue. Please refer to the specific event details.</dd>
+        <br>
+        <dt>Are there workshops or educational opportunities?</dt>
+        <dd>We encourage you to visit our website or contact us to inquire about educational opportunities.</dd>
+        <br>
+        <dt>How can I find out about upcoming performances?</dt>
+        <dd>Visit our website's "Festival Info" page or subscribe to our email list/follow us on social media.</dd>
+        <br>
+        <dt>Is Jazz a Bella a family-friendly event?</dt>
+        <dd>The atmosphere can vary. Check event details to determine if suitable for all ages.</dd>
+        <br>
+        <dt>What is the dress code?</dt>
+        <dd>There is no formal dress code. Dress comfortably and appropriately for the venue.</dd>
+        <br>
+        <dt>Is food and beverage available?</dt>
+        <dd>Food and beverage availability depends on the venue. Check with the venue directly.</dd>
+        <br>
+        <dt>Do I need to be a professional musician to enjoy?</dt>
+        <dd>Absolutely not! Jazz a Bella welcomes all music lovers.</dd>
+        <br>
+        <dt>How can I get involved with Jazz a Bella?</dt>
+        <dd>Contact us through our website or social media to inquire about volunteering, musician submissions, or sponsorships.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Jazz in the Park</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

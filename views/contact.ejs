@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="Images/logo.png" alt="Jazz Festival Logo">
+      </div>
+      <ul>
+        <li><a href="index.html">Jazz'A'Bella</a></li>
+        <li><a href="lineup.html">Lineup</a></li>
+        <li><a href="stages.html">Stages</a></li>
+        <li><a href="festival_info.html">Info</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="contactForm" action="/submit-form" method="POST">
+      <h2>Contact Us</h2>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <button onclick="location.href='index.html'" class="home-button">Return to Home</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Jazz in the Park</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
