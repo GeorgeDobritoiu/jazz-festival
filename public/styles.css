@@ -11,10 +11,13 @@ body {
 header {
   background-color: #946e8a;
   color: #fdf9f9;
-  padding: 20px;
+  padding: 1rem 0;
   text-align: center;
+  width: 100%;
 }
-
+header h1, header h2 {
+  margin: 0.5rem 0;
+}
 * {
   box-sizing: border-box;
 }
@@ -110,14 +113,59 @@ header {
   }
 }
 
-nav {
+@media (max-width: 768px) {
+  .navbar-links ul {
+    flex-direction: row; /* Stacks items vertically */
+    width: 100%;
+    display: none;
+  }
+  .navbar-links ul.active {
+    display: flex;
+  }
+  .navbar-links li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .toggle-button {
+    display: flex;
+  }
+}
+.navbar {
   display: flex;
+  justify-content: center; /* Center the menu items */
   align-items: center;
-  height: 25px;
+  padding: 1rem;
+  background-color: #4A4A4A;
+  color: #fff;
   width: 100%;
-  font-size: 20px;
-  justify-content: space-evenly;
-  margin: 10px 10px;
+  box-sizing: border-box;
+}
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the menu items */
+  width: 100%;
+}
+
+.navbar-links li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background-color 0.3s;
+  font-weight: bold; /* Make the font strong */
+}
+
+.navbar-links a:hover {
+  background-color: #575757;
 }
 
 nav ul {
@@ -125,6 +173,9 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center; /* Center the menu items */
+  width: 100%;
 }
 
 nav li {
@@ -133,7 +184,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #f0e1e1;
+  color: #141313;
 }
 
 main {
@@ -342,7 +393,7 @@ img {
   cursor: pointer;
   display: block;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 
 .band-description {
@@ -355,7 +406,7 @@ form {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 50px auto;
 }
@@ -369,7 +420,9 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
