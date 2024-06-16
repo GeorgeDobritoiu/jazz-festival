@@ -54,7 +54,7 @@ app.get('/contact', (req, res) => {
 // Handle form submissions
 app.post('/submit-form', (req, res) => {
   const { name, email, message } = req.body;
-  db.run('INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)', [name, email, message], function(err) {
+  db.run('INSERT INTO emails (email_name, email_addr, email_msg) VALUES (?, ?, ?)', [name, email, message], function(err) {
     if (err) {
       return console.error(err.message);
     }
@@ -71,7 +71,7 @@ app.get('/submit-response.html', (req, res) => {
 // AJAX search endpoint
 app.post('/search', (req, res) => {
   const searchTerm = req.body.searchTerm;
-  db.all('SELECT * FROM contacts WHERE name LIKE ?', [`%${searchTerm}%`], (err, rows) => {
+  db.all('SELECT * FROM emails WHERE email_name LIKE ?', [`%${searchTerm}%`], (err, rows) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }
